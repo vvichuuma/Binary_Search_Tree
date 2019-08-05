@@ -69,6 +69,24 @@ class BST{
         console.log(root);
     }
 
+    //searching for a particular node: 
+
+    findIt(data){
+        var current = this.root; 
+        while(current.data !== data){
+           if(data < current.data){
+               current = current.left;
+           }else if(data > current.data){
+              current = current.right;
+           }
+
+           if(current === null){
+               return null; 
+           }
+        }
+        console.log(current); 
+    }
+
 
 }
 
@@ -83,5 +101,6 @@ b2.addData(140);
 b2.addData(30);
 console.log("---");
 b2.findMax();
+b2.findIt(75);
 
 // console.log(b2);
