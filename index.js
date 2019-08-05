@@ -47,6 +47,29 @@ class BST{
     }
 
 
+    //Finding Minimum: 
+
+   findMin(){
+       var root = this.root; 
+       while(root.left !== null){
+           root = root.left;
+       }
+
+       console.log(root);
+   }
+
+     //Finding Maximum: 
+
+     findMax(){
+        var root = this.root; 
+        while(root.right !== null){
+            root = root.right;
+        }
+ 
+        console.log(root);
+    }
+
+
 }
 
 const b2 = new BST; 
@@ -58,4 +81,7 @@ b2.addData(60);
 b2.addData(200);
 b2.addData(140);
 b2.addData(30);
-console.log(b2);
+console.log("---");
+b2.findMax();
+
+// console.log(b2);
